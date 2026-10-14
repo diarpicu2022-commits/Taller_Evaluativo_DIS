@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-clifford: #da373d;
+      }
+    </style>
+  </head>
+  <body>
+  
+<div class="flex items-center justify-center min-h-screen bg-gray-200 p-8">
+  <!-- Contenedor Principal -->
+  <div class="flex w-full max-w-6xl h-[800px] rounded-xl overflow-hidden shadow-2xl border border-gray-100">
+    
+    <!-- Menú Lateral de Iconos -->
+    <div class="w-16 bg-gray-100 flex flex-col justify-between items-center py-6 text-gray-500 border-r border-gray-200 z-20">
+      <!-- Iconos Superiores -->
+      <div class="flex flex-col items-center gap-6 w-full">
+        <!-- 6 puntos -->
+        <button class="hover:text-gray-800 transition-colors">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M4 4h4v4H4zm12 0h4v4h-4zM4 16h4v4H4zm12 0h4v4h-4zM4 10h4v4H4zm12 0h4v4h-4z"/>
+          </svg>
+        </button>
+        <!-- dh -->
+        <button class="hover:text-gray-800 transition-colors">
+        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" xmlns="http://w3.org">
+        <text 
+          x="12" 
+          y="13" 
+          font-family="Arial, sans-serif" 
+           font-size="18" 
+            font-weight="bold" 
+            transform="rotate(270 12 12)" 
+           text-anchor="middle" 
+           dominant-baseline="central"
+           >
+      dh<tspan fill="#ff69b4">.</tspan>
+    </text>
+  </svg>
+</button>
+
+        <!-- notificaciones -->
+        <button class="hover:text-gray-800 transition-colors">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
+          </svg>
+        </button>
+        <!-- Mensajes -->
+        <button class="hover:text-gray-800 transition-colors">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+          </svg>
+        </button>
+        <!-- Rayo-->
+        <button class="hover:text-gray-800 transition-colors">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+          </svg>
+        </button>
+      </div>
+      <!-- Iconos Inferiores -->
+      <div class="flex flex-col items-center gap-5 w-full">
+        <!-- Perfil -->
+        <button class="w-8 h-8 rounded-full overflow-hidden border-2 border-gray-300 hover:border-gray-500 transition-colors">
+          <img src="https://img.magnific.com/foto-gratis/retrato-hombre-blanco-aislado_53876-40306.jpg?semt=ais_hybrid&w=740&q=80" alt="Perfil" class="w-full h-full object-cover">
+        </button>
+        <!-- Engrane -->
+        <button class="hover:text-gray-800 transition-colors">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Lado Izquierdo -->
+    <div class="w-1/4 bg-gray-100 flex flex-col justify-between p-6 text-gray-800 relative z-0 -mr-8 border-r border-gray-200">
+      <div class="flex flex-col gap-6 mt-4">
+        <!-- Bloque Principal de Navegación -->
+        <nav class="flex flex-col gap-3 font-medium text-sm mb-10">
+          <a href="#" class="hover:text-blue-600 transition-colors">Dashboard</a>
+          <a href="#" class="hover:text-blue-600 transition-colors text-blue-600 font-semibold">Projects</a>
+          <a href="#" class="hover:text-blue-600 transition-colors">Issues and filters</a>
+          <a href="#" class="hover:text-blue-600 transition-colors">Structure</a>
+          <a href="#" class="hover:text-blue-600 transition-colors">Settings</a>
+        </nav>
+        <!-- Bloque Comercial Separador -->
+        <div class="flex flex-col gap-3">
+          <span class="text-xs uppercase tracking-wider font-semibold text-gray-400">Commercial Requests</span>
+          <nav class="flex flex-col gap-3 font-medium text-sm text-gray-800">
+            <a href="#" class="hover:text-blue-600 transition-colors">Marketing</a>
+            <a href="#" class="hover:text-blue-600 transition-colors">Business Research</a>
+            <a href="#" class="hover:text-blue-600 transition-colors">Finances</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lado Derecho -->
+    <div class="w-3/4 bg-white flex flex-col p-8 text-gray-800 rounded-xl shadow-xl relative z-10">
+      <!-- Navbar Superior Derecha -->
+      <div class="w-full flex justify-end items-center gap-4 border-b border-gray-100 pb-4">
+        <!-- Iconos -->
+        <div class="flex gap-2">
+          <!-- Personas -->
+          <button class="p-2 bg-white rounded-lg shadow border border-gray-100 hover:bg-gray-50 text-gray-600 transition-all">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+            </svg>
+          </button>
+          <!-- Audífonos -->
+          <button class="p-2 bg-white rounded-lg shadow border border-gray-100 hover:bg-gray-50 text-gray-600 transition-all">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path>
+            </svg>
+          </button>
+          <!-- Buzón -->
+          <button class="p-2 bg-white rounded-lg shadow border border-gray-100 hover:bg-gray-50 text-gray-600 transition-all">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0a2 2 0 01-2 2H6a2 2 0 01-2-2m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"></path>
+            </svg>
+          </button>
+        </div>
+        <!-- Buscador -->
+        <div class="relative w-48">
+          <input type="text" placeholder="Search..." class="w-full pl-8 pr-3 py-1.5 text-sm bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:border-gray-400 transition-colors">
+          <svg class="w-4 h-4 text-gray-400 absolute left-2.5 top-2.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
+        </div>
+      </div>
+
+      <!-- SECCIÓN DE CONTENIDO -->
+      <div class="flex-1 flex flex-col pt-6 overflow-y-auto">
+        <!-- Encabezados de Títulos -->
+        <div class="mb-6">
+          <span class="text-xs font-semibold text-gray-400 tracking-wider block mb-1 lowercase">dh</span>
+          <h1 class="text-3xl font-bold text-gray-900 tracking-tight">Projects</h1>
+        </div>
+
+        <!-- Tarjeta de Proyecto  -->
+        <div class="p-5 bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-100 rounded-xl shadow-sm mb-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="px-2 py-0.5 bg-blue-600 text-[10px] font-bold text-white uppercase rounded">Active</span>
+              <h2 class="text-lg font-bold text-gray-800">ISO Project</h2>
+            </div>
+            <p class="text-sm text-gray-600">Web Application development and compliance portal tracking infrastructure logs.</p>
+          </div>
+          <button class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium text-xs rounded-lg transition-colors shadow-sm">
+            View Details
+          </button>
+        </div>
+
+        <!-- Flujo de Tareas -->
+        <div class="flex-1 grid grid-cols-1 md:grid-cols-3 gap-6 min-h-[300px]">
+          <!-- Columna: Backlog -->
+          <div class="flex flex-col bg-gray-50 p-4 rounded-xl border border-gray-200/60">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-bold text-gray-500 uppercase tracking-wider">Backlog</span>
+              <span class="w-5 h-5 bg-gray-200 text-gray-600 text-[11px] font-bold rounded-full flex items-center justify-center">2</span>
+            </div>
+            <div class="flex flex-col gap-3">
+              <div class="p-3 bg-white rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow cursor-pointer">
+                <p class="text-sm font-medium text-gray-800">Define software architecture constraints</p>
+                <div class="mt-2 flex justify-between items-center text-[11px] text-gray-400"><span>Oct 14</span><span class="text-amber-600 font-semibold">Medium</span></div>
+              </div>
+              <div class="p-3 bg-white rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow cursor-pointer">
+
+
+
+   
+
+  <script src="components/Sidebar.js"></script>
+  </body>
+</html>
+
+
+
+    
+    
