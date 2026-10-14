@@ -1,186 +1,272 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <style type="text/tailwindcss">
-      @theme {
-        --color-clifford: #da373d;
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #f3f4f8; /* Color de fondo general similar a la imagen */
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(10px);
       }
     </style>
   </head>
-  <body>
-  
-<div class="flex items-center justify-center min-h-screen bg-gray-200 p-8">
+  <body class="flex items-center justify-center min-h-screen p-8">
+
   <!-- Contenedor Principal -->
-  <div class="flex w-full max-w-6xl h-[800px] rounded-xl overflow-hidden shadow-2xl border border-gray-100">
-    
-    <!-- Menú Lateral de Iconos -->
-    <div class="w-16 bg-gray-100 flex flex-col justify-between items-center py-6 text-gray-500 border-r border-gray-200 z-20">
-      <!-- Iconos Superiores -->
-      <div class="flex flex-col items-center gap-6 w-full">
-        <!-- 6 puntos -->
-        <button class="hover:text-gray-800 transition-colors">
-          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M4 4h4v4H4zm12 0h4v4h-4zM4 16h4v4H4zm12 0h4v4h-4zM4 10h4v4H4zm12 0h4v4h-4z"/>
-          </svg>
-        </button>
-        <!-- dh -->
-        <button class="hover:text-gray-800 transition-colors">
-        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" xmlns="http://w3.org">
-        <text 
-          x="12" 
-          y="13" 
-          font-family="Arial, sans-serif" 
-           font-size="18" 
-            font-weight="bold" 
-            transform="rotate(270 12 12)" 
-           text-anchor="middle" 
-           dominant-baseline="central"
-           >
-      dh<tspan fill="#ff69b4">.</tspan>
-    </text>
-  </svg>
-</button>
+  <div class="flex w-full max-w-[1200px] h-[800px] bg-white rounded-[32px] overflow-hidden shadow-2xl">
 
-        <!-- notificaciones -->
-        <button class="hover:text-gray-800 transition-colors">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
-          </svg>
-        </button>
-        <!-- Mensajes -->
-        <button class="hover:text-gray-800 transition-colors">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-          </svg>
-        </button>
-        <!-- Rayo-->
-        <button class="hover:text-gray-800 transition-colors">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-          </svg>
-        </button>
-      </div>
-      <!-- Iconos Inferiores -->
-      <div class="flex flex-col items-center gap-5 w-full">
-        <!-- Perfil -->
-        <button class="w-8 h-8 rounded-full overflow-hidden border-2 border-gray-300 hover:border-gray-500 transition-colors">
-          <img src="https://img.magnific.com/foto-gratis/retrato-hombre-blanco-aislado_53876-40306.jpg?semt=ais_hybrid&w=740&q=80" alt="Perfil" class="w-full h-full object-cover">
-        </button>
-        <!-- Engrane -->
-        <button class="hover:text-gray-800 transition-colors">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
-          </svg>
-        </button>
-      </div>
-    </div>
+    <!-- Lado Izquierdo Combinado (Iconos + Navegación) -->
+    <div class="w-72 bg-[#f8f9fc] flex flex-shrink-0">
 
-    <!-- Lado Izquierdo -->
-    <div class="w-1/4 bg-gray-100 flex flex-col justify-between p-6 text-gray-800 relative z-0 -mr-8 border-r border-gray-200">
-      <div class="flex flex-col gap-6 mt-4">
-        <!-- Bloque Principal de Navegación -->
-        <nav class="flex flex-col gap-3 font-medium text-sm mb-110">
-          <a href="#" class="hover:text-blue-600 transition-colors">Dashboard</a>
-          <a href="#" class="hover:text-blue-600 transition-colors text-blue-600 font-semibold">Projects</a>
-          <a href="#" class="hover:text-blue-600 transition-colors">Issues and filters</a>
-          <a href="#" class="hover:text-blue-600 transition-colors">Structure</a>
-          <a href="#" class="hover:text-blue-600 transition-colors">Settings</a>
+      <!-- Menú Lateral de Iconos -->
+      <div class="w-20 flex flex-col justify-between items-center py-8 relative">
+        <!-- Indicador de sección activa (línea rosa) -->
+        <div class="absolute left-0 top-32 w-1 h-6 bg-pink-500 rounded-r-md"></div>
+
+        <!-- Iconos Superiores -->
+        <div class="flex flex-col items-center gap-8 w-full text-gray-400">
+          <!-- 6 puntos -->
+          <button class="hover:text-gray-800 transition-colors">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M4 4h4v4H4zm12 0h4v4h-4zM4 16h4v4H4zm12 0h4v4h-4zM4 10h4v4H4zm12 0h4v4h-4z"/>
+            </svg>
+          </button>
+
+          <!-- dh logo rotado -->
+          <button class="text-gray-900 mb-2">
+            <svg class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
+              <text x="12" y="12" font-family="Arial, sans-serif" font-size="16" font-weight="bold" transform="rotate(270 12 12)" text-anchor="middle" dominant-baseline="central">
+                dh<tspan fill="#ff2d88">.</tspan>
+              </text>
+            </svg>
+          </button>
+
+          <!-- notificaciones -->
+          <button class="hover:text-gray-800 transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
+            </svg>
+          </button>
+
+          <!-- Mensajes -->
+          <button class="hover:text-gray-800 transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+            </svg>
+          </button>
+
+          <!-- Rayo -->
+          <button class="hover:text-gray-800 transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Iconos Inferiores -->
+        <div class="flex flex-col items-center gap-6 w-full text-gray-400">
+          <!-- Perfil -->
+          <button class="w-8 h-8 rounded-full overflow-hidden border border-gray-300">
+            <img src="https://i.pravatar.cc/150?u=a042581f4e29026704d" alt="Perfil" class="w-full h-full object-cover">
+          </button>
+          <!-- Engrane -->
+          <button class="hover:text-gray-800 transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Menú de Texto de Navegación -->
+      <div class="flex-1 flex flex-col pt-10 px-2 text-sm">
+        <nav class="flex flex-col gap-6 font-medium text-gray-500 mb-16">
+          <a href="#" class="hover:text-gray-900 transition-colors">Dashboard</a>
+          <a href="#" class="text-pink-500 transition-colors">Projects</a>
+          <a href="#" class="hover:text-gray-900 transition-colors">Issues and Filters</a>
+          <a href="#" class="hover:text-gray-900 transition-colors">Structure</a>
+          <a href="#" class="hover:text-gray-900 transition-colors">Settings</a>
         </nav>
-        <!-- Bloque Comercial Separador -->
-        <div class="flex flex-col gap-3">
-          <span class="text-xs uppercase tracking-wider font-semibold text-gray-400">Commercial Requests</span>
-          <nav class="flex flex-col gap-3 font-medium text-sm text-gray-800">
-            <a href="#" class="hover:text-blue-600 transition-colors">Marketing</a>
-            <a href="#" class="hover:text-blue-600 transition-colors">Business Research</a>
-            <a href="#" class="hover:text-blue-600 transition-colors">Finances</a>
+
+        <div class="flex flex-col gap-5 mt-auto mb-20">
+          <span class="text-xs font-semibold text-gray-400 tracking-wider">Commercial Requests</span>
+          <nav class="flex flex-col gap-6 font-medium text-gray-600">
+            <a href="#" class="hover:text-gray-900 transition-colors">Marketing</a>
+            <a href="#" class="hover:text-gray-900 transition-colors">Business research</a>
+            <a href="#" class="hover:text-gray-900 transition-colors">Finances</a>
           </nav>
         </div>
       </div>
     </div>
 
-    <!-- Lado Derecho -->
-    <div class="w-3/4 bg-white flex flex-col p-8 text-gray-800 rounded-xl shadow-xl relative z-10">
+    <!-- Lado Derecho (Contenido Principal) -->
+    <div class="flex-1 bg-white flex flex-col p-10 relative z-10 overflow-hidden">
+
       <!-- Navbar Superior Derecha -->
-      <div class="w-full flex justify-end items-center gap-4 border-b border-gray-100 pb-4">
-        <!-- Iconos -->
-        <div class="flex gap-2">
-          <!-- Personas -->
-          <button class="p-2 bg-white rounded-lg shadow border border-gray-100 hover:bg-gray-50 text-gray-600 transition-all">
+      <div class="w-full flex justify-end items-center gap-4 pb-8">
+        <!-- Iconos de usuario y acciones -->
+        <div class="flex gap-4">
+          <button class="p-2.5 bg-[#f8f9fc] rounded-xl text-gray-600 hover:bg-gray-100 transition-all">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
             </svg>
           </button>
-          <!-- Audífonos -->
-          <button class="p-2 bg-white rounded-lg shadow border border-gray-100 hover:bg-gray-50 text-gray-600 transition-all">
+          <button class="p-2.5 bg-[#f8f9fc] rounded-xl text-gray-600 hover:bg-gray-100 transition-all">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path>
             </svg>
           </button>
-          <!-- Buzón -->
-          <button class="p-2 bg-white rounded-lg shadow border border-gray-100 hover:bg-gray-50 text-gray-600 transition-all">
+          <button class="p-2.5 bg-[#f8f9fc] rounded-xl text-gray-600 hover:bg-gray-100 transition-all">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0a2 2 0 01-2 2H6a2 2 0 01-2-2m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"></path>
             </svg>
           </button>
         </div>
         <!-- Buscador -->
-        <div class="relative w-48">
-          <input type="text" placeholder="Search..." class="w-full pl-8 pr-3 py-1.5 text-sm bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:border-gray-400 transition-colors">
-          <svg class="w-4 h-4 text-gray-400 absolute left-2.5 top-2.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <div class="relative w-64 ml-4">
+          <input type="text" placeholder="Search..." class="w-full pl-4 pr-10 py-2.5 text-sm bg-[#f8f9fc] rounded-xl focus:outline-none placeholder-gray-400">
+          <svg class="w-4 h-4 text-gray-400 absolute right-4 top-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
           </svg>
         </div>
       </div>
 
-      <!-- SECCIÓN DE CONTENIDO -->
-      <div class="flex-1 flex flex-col pt-6 overflow-y-auto">
-        <!-- Encabezados de Títulos -->
-        <div class="mb-6">
-          <span class="text-xs font-semibold text-gray-400 tracking-wider block mb-1 lowercase">dh</span>
-          <h1 class="text-3xl font-bold text-gray-900 tracking-tight">Projects</h1>
-        </div>
+      <!-- Título -->
+      <div class="mb-10">
+        <span class="text-sm font-semibold text-[#2b2b40] block mb-1">dh</span>
+        <h1 class="text-4xl font-bold text-[#2b2b40] tracking-tight">Projects</h1>
+      </div>
 
-        <!-- Tarjeta de Proyecto  -->
-        <div class="p-5 bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-100 rounded-xl shadow-sm mb-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-          <div>
-            <div class="flex items-center gap-2 mb-1">
-              <span class="px-2 py-0.5 bg-blue-600 text-[10px] font-bold text-white uppercase rounded">Active</span>
-              <h2 class="text-lg font-bold text-gray-800">ISO Project</h2>
-            </div>
-            <p class="text-sm text-gray-600">Web Application development and compliance portal tracking infrastructure logs.</p>
+      <!-- Tarjetas de Proyectos -->
+      <div class="flex gap-6 mb-12">
+        <!-- iOS Project -->
+        <div class="relative w-72 bg-[#f8f9fc] border border-gray-100 p-6 rounded-[2rem]">
+          <div class="absolute -top-4 right-8 w-12 h-12 bg-gradient-to-br from-pink-400 to-pink-500 rounded-2xl shadow-lg shadow-pink-200 flex items-center justify-center text-white">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
           </div>
-          <button class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium text-xs rounded-lg transition-colors shadow-sm">
-            View Details
-          </button>
+          <div class="flex gap-1 mb-8 mt-2">
+            <img src="https://i.pravatar.cc/150?u=1" class="w-8 h-8 rounded-full border-2 border-white -ml-2 first:ml-0" alt="">
+            <img src="https://i.pravatar.cc/150?u=2" class="w-8 h-8 rounded-full border-2 border-white -ml-4" alt="">
+            <img src="https://i.pravatar.cc/150?u=3" class="w-8 h-8 rounded-full border-2 border-white -ml-4" alt="">
+            <span class="text-gray-400 ml-auto leading-8 font-bold tracking-widest text-lg">...</span>
+          </div>
+          <h2 class="text-xl font-bold text-[#2b2b40] mb-1">iOS Project</h2>
+          <p class="text-sm text-gray-400">32 Tasks</p>
         </div>
 
-        <!-- Flujo de Tareas -->
-        <div class="flex-1 grid grid-cols-1 md:grid-cols-3 gap-6 min-h-[300px]">
-          <!-- Columna: Backlog -->
-          <div class="flex flex-col bg-gray-50 p-4 rounded-xl border border-gray-200/60">
-            <div class="flex items-center justify-between mb-4">
-              <span class="text-xs font-bold text-gray-500 uppercase tracking-wider">Backlog</span>
-              <span class="w-5 h-5 bg-gray-200 text-gray-600 text-[11px] font-bold rounded-full flex items-center justify-center">2</span>
+        <!-- Web Application -->
+        <div class="relative w-72 bg-[#f8f9fc] border border-gray-100 p-6 rounded-[2rem]">
+          <div class="absolute -top-4 right-8 w-12 h-12 bg-gradient-to-br from-indigo-500 to-blue-500 rounded-2xl shadow-lg shadow-blue-200 flex items-center justify-center text-white">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+          </div>
+          <div class="flex gap-1 mb-8 mt-2">
+            <img src="https://i.pravatar.cc/150?u=4" class="w-8 h-8 rounded-full border-2 border-white -ml-2 first:ml-0" alt="">
+            <img src="https://i.pravatar.cc/150?u=5" class="w-8 h-8 rounded-full border-2 border-white -ml-4" alt="">
+            <img src="https://i.pravatar.cc/150?u=6" class="w-8 h-8 rounded-full border-2 border-white -ml-4" alt="">
+            <span class="text-gray-400 ml-auto leading-8 font-bold tracking-widest text-lg">...</span>
+          </div>
+          <h2 class="text-xl font-bold text-[#2b2b40] mb-1">Web Application</h2>
+          <p class="text-sm text-gray-400">124 Tasks</p>
+        </div>
+
+        <!-- Add Button -->
+        <div class="w-16 border-2 border-dashed border-gray-200 rounded-[2rem] flex items-center justify-center text-gray-400 hover:text-gray-600 hover:border-gray-400 transition-colors cursor-pointer">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"></path>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Línea Separadora -->
+      <hr class="border-gray-100 mb-6">
+
+      <!-- Tabla de Tareas -->
+      <div class="flex-1 overflow-y-auto">
+        <!-- Encabezados -->
+        <div class="grid grid-cols-[30px_120px_1fr_120px_200px_30px] gap-4 mb-4 px-4 text-xs font-semibold text-gray-400">
+          <div><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3 6a3 3 0 013-3h10a1 1 0 01.8 1.6L14.25 8l2.55 3.4A1 1 0 0116 13H6a1 1 0 00-1 1v3a1 1 0 11-2 0V6z" clip-rule="evenodd"></path></svg></div>
+          <div>Due date</div>
+          <div>Title</div>
+          <div>Status</div>
+          <div>Assignee</div>
+          <div></div>
+        </div>
+
+        <!-- Filas de Tareas -->
+        <div class="space-y-3">
+          <!-- Tarea 1 -->
+          <div class="grid grid-cols-[30px_120px_1fr_120px_200px_30px] gap-4 items-center px-4 py-3 bg-[#f8f9fc] rounded-2xl">
+            <div class="w-6 h-6 rounded-full bg-orange-100 text-orange-400 flex items-center justify-center"><svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd"></path></svg></div>
+            <div class="text-sm font-semibold text-[#2b2b40]">14 Dec 2020</div>
+            <div class="flex items-center gap-3">
+              <div class="w-7 h-7 bg-pink-500 rounded-full flex items-center justify-center text-white"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path></svg></div>
+              <span class="text-sm font-semibold text-[#2b2b40]">Implement new UX</span>
             </div>
-            <div class="flex flex-col gap-3">
-              <div class="p-3 bg-white rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow cursor-pointer">
-                <p class="text-sm font-medium text-gray-800">Define software architecture constraints</p>
-                <div class="mt-2 flex justify-between items-center text-[11px] text-gray-400"><span>Oct 14</span><span class="text-amber-600 font-semibold">Medium</span></div>
-              </div>
-              <div class="p-3 bg-white rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow cursor-pointer">
+            <div><span class="px-3 py-1 bg-gray-200 text-gray-500 text-[10px] font-bold rounded-full uppercase">Backlog</span></div>
+            <div class="flex items-center gap-3">
+              <img src="https://i.pravatar.cc/150?u=1" class="w-8 h-8 rounded-full" alt="">
+              <span class="text-sm font-medium text-gray-600">Alejandro Wells</span>
+            </div>
+            <button class="text-gray-400 hover:text-gray-600 font-bold">⋮</button>
+          </div>
 
+          <!-- Tarea 2 -->
+          <div class="grid grid-cols-[30px_120px_1fr_120px_200px_30px] gap-4 items-center px-4 py-3 hover:bg-[#f8f9fc] rounded-2xl transition-colors">
+            <div class="w-6 h-6 rounded-full bg-green-100 text-green-400 flex items-center justify-center"><svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></div>
+            <div class="text-sm font-semibold text-[#2b2b40]">02 Jun 2020</div>
+            <div class="flex items-center gap-3">
+              <div class="w-7 h-7 bg-indigo-500 rounded-full flex items-center justify-center text-white"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path></svg></div>
+              <span class="text-sm font-semibold text-[#2b2b40]">Design syntax</span>
+            </div>
+            <div><span class="px-3 py-1 bg-blue-100 text-blue-600 text-[10px] font-bold rounded-full uppercase">In progress</span></div>
+            <div class="flex items-center gap-3">
+              <img src="https://i.pravatar.cc/150?u=2" class="w-8 h-8 rounded-full" alt="">
+              <span class="text-sm font-medium text-gray-600">Lenora Sandoval</span>
+            </div>
+            <button class="text-gray-400 hover:text-gray-600 font-bold">⋮</button>
+          </div>
 
+          <!-- Tarea 3 -->
+          <div class="grid grid-cols-[30px_120px_1fr_120px_200px_30px] gap-4 items-center px-4 py-3 hover:bg-[#f8f9fc] rounded-2xl transition-colors">
+            <div class="w-6 h-6 rounded-full bg-red-100 text-red-400 flex items-center justify-center"><svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd"></path></svg></div>
+            <div class="text-sm font-semibold text-[#2b2b40]">31 Jul 2020</div>
+            <div class="flex items-center gap-3">
+              <div class="w-7 h-7 bg-pink-500 rounded-full flex items-center justify-center text-white"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path></svg></div>
+              <span class="text-sm font-semibold text-[#2b2b40]">Configurable resources</span>
+            </div>
+            <div><span class="px-3 py-1 bg-green-100 text-green-600 text-[10px] font-bold rounded-full uppercase">Done</span></div>
+            <div class="flex items-center gap-3">
+              <img src="https://i.pravatar.cc/150?u=3" class="w-8 h-8 rounded-full" alt="">
+              <span class="text-sm font-medium text-gray-600">Calvin Garrett</span>
+            </div>
+            <button class="text-gray-400 hover:text-gray-600 font-bold">⋮</button>
+          </div>
 
-   
+          <!-- Tarea 4 -->
+          <div class="grid grid-cols-[30px_120px_1fr_120px_200px_30px] gap-4 items-center px-4 py-3 bg-[#f8f9fc] rounded-2xl">
+            <div class="w-6 h-6 rounded-full bg-orange-100 text-orange-400 flex items-center justify-center"><svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd"></path></svg></div>
+            <div class="text-sm font-semibold text-[#2b2b40]">17 Feb 2020</div>
+            <div class="flex items-center gap-3">
+              <div class="w-7 h-7 bg-pink-500 rounded-full flex items-center justify-center text-white"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path></svg></div>
+              <span class="text-sm font-semibold text-[#2b2b40]">Implement extensions</span>
+            </div>
+            <div><span class="px-3 py-1 bg-gray-200 text-gray-500 text-[10px] font-bold rounded-full uppercase">Backlog</span></div>
+            <div class="flex items-center gap-3">
+              <img src="https://i.pravatar.cc/150?u=4" class="w-8 h-8 rounded-full" alt="">
+              <span class="text-sm font-medium text-gray-600">Florence Guzman</span>
+            </div>
+            <button class="text-gray-400 hover:text-gray-600 font-bold">⋮</button>
+          </div>
+        </div>
 
-  <script src="components/Sidebar.js"></script>
+      </div>
+    </div>
+  </div>
   </body>
 </html>
-
-
-
-    
-    
